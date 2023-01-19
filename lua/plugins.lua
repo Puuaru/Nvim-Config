@@ -10,7 +10,7 @@ return require('packer').startup(
       "kyazdani42/nvim-tree.lua",
       requires = 'kyazdani42/nvim-web-devicons',
       config = "require('plugin-config/nvim-tree').setup()",
-      -- cmd = {'NvimTreeToggle', 'NvimTreeFindFileToggle'}
+      cmd = {'NvimTreeToggle', 'NvimTreeFindFileToggle'}
     }
 
     -- 多tag
@@ -19,21 +19,24 @@ return require('packer').startup(
       requires = 'kyazdani42/nvim-web-devicons',
       config = "require('plugin-config/bufferline')"
     }
+
     -- 语法高亮
     use {
       "nvim-treesitter/nvim-treesitter",
       run = ':TSUpdate',
       config = "require('plugin-config/nvim-treesitter')"
     }
+
     -- nvim-autopairs, 括号匹对
     use {
       "windwp/nvim-autopairs",
       config = "require('plugin-config/nvim-autopairs')"
     }
 
-    -- use {
-    --   "hrsh7th/nvim-cmp",
-    -- }
+    require('plugin-config.vim-floaterm').config()
+    use {
+      "voldikss/vim-floaterm"
+    }
 
     -- comment, 快速注释
     use {
@@ -49,11 +52,11 @@ return require('packer').startup(
       "hrsh7th/vim-vsnip",
     }
 
+    -- coc作为补全系统
     require('plugin-config.coc').config()
     use {'neoclide/coc.nvim', branch = 'release'}
 
     -- themes
-    -- use 'shaunsingh/nord.nvim'
     use {
       'folke/tokyonight.nvim',
     }

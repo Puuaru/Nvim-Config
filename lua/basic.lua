@@ -34,6 +34,11 @@ G.cmd([[
     set mouse=a
 ]])
 
+-- 设置相对行号
+G.cmd([[
+    set relativenumber
+]])
+
 -- 错误无提示音 去除屏幕闪烁
 G.cmd([[
     set vb

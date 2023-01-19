@@ -6,6 +6,7 @@ return require('packer').startup(
 
     use { 'yianwillis/vimcdoc', event = 'VimEnter' }
 
+    require('plugin-config.nvim-tree').config()
     use {
       "kyazdani42/nvim-tree.lua",
       requires = 'kyazdani42/nvim-web-devicons',

@@ -22,7 +22,7 @@ function M.config()
     { 'n', '<c-a>', ':Ag<cr>', {silent = true, noremap = true}},
     { 'n', '<c-p>', ':Files<cr>', {silent = true, noremap = true}},
     { 'n', '<c-c>', ':BLines<cr>', {silent = true, noremap = true}},
-    { 'n', '<c-g>', ':GFiles?<cr>', {silent = true, noremap = true}},
+    { 'n', '<C-A-g>', ':GFiles?<cr>', {silent = true, noremap = true}},
     { 'n', '<C-A-h>', ':CHistory<cr>', {silent = true, noremap = true}},
   })
 end

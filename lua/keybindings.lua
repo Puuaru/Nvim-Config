@@ -96,9 +96,9 @@ pluginKeys.nvimTreeList = { -- 打开文件或文件夹
   { key = "I", action = "toggle_file_info" },
   { key = "n", action = "tabnew" },
   -- 进入下一级
-  { key = { "]" }, action = "cd" },
+  { key = { "<F>" }, action = "cd" },
   -- 进入上一级
-  { key = { "[" }, action = "dir_up" },
+  { key = { "<B>" }, action = "dir_up" },
 }
 
 -- bufferline

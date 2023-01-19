@@ -16,6 +16,7 @@ function M.setFTToggleMap(key, name, cmd)
         { 't', key, "&ft == \"floaterm\" ? printf('<c-\\><c-n>:FloatermHide<cr>%s', floaterm#terminal#get_bufnr('" .. name .. "') == bufnr('%') ? '' : '" .. key.. "') : '" .. key.. "'", {silent = true, expr = true}},
     })
 end
+
 -- 特殊func 定义了F5行为时根据当前文件类型调用不同的命令
 function M.runFile()
     G.cmd('w')
@@ -39,6 +40,7 @@ function M.config()
 
   M.setFTToggleMap('<c-t>', 'TERM', '')
   M.setFTToggleMap('<c-f>', 'RANGER', 'ranger')
+  M.setFTToggleMap('<c-g>', 'LAZYGIT', 'lazygit')
   -- M.setFTToggleMap('<c-b>', 'DBUI', 'nvim +CALLDB')  // 基于nvim的DB管理工具
   G.map({
         { 'n', '<F5>', ':lua require("plugin-config/vim-floaterm").runFile()<cr>', {silent = true, noremap = true}},

@@ -56,6 +56,15 @@ return require('packer').startup(
     require('plugin-config.coc').config()
     use {'neoclide/coc.nvim', branch = 'release'}
 
+    -- fzf 文件搜索
+    require('plugin-config.fzf').config()
+    use { 'junegunn/fzf' }
+    use {
+      'junegunn/fzf.vim',
+      -- run = 'cd ~/.fzf && ./install -all',
+      after = "fzf"
+    }
+
     -- themes
     use {
       'folke/tokyonight.nvim',

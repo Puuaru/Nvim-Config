@@ -70,6 +70,12 @@ return require('packer').startup(
     use {
       'folke/tokyonight.nvim',
     }
+
+    use {
+      'nvim-lualine/lualine.nvim',
+      requires = { 'kyazdani42/nvim-web-devicons', opt = true },
+      config = "require('plugin-config/nvim-lualine').setup()"
+    }
   end
 )
 

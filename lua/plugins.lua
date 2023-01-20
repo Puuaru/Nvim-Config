@@ -48,11 +48,6 @@ return require('packer').startup(
         -- end,
       }
 
-    -- Snippet 引擎
-    use {
-      "hrsh7th/vim-vsnip",
-    }
-
     -- coc作为补全系统
     require('plugin-config.coc').config()
     use {'neoclide/coc.nvim', branch = 'release'}

@@ -3,11 +3,9 @@
   "suggest.floatConfig": {"border": true, "rounded": true},
   "diagnostic.floatConfig": {"border": true, "rounded": true},
   "signature.floatConfig": {"border": true, "rounded": true},
-  "list.autoPreview": true,
   "outline.autoPreview": true,
   "git.floatConfig": {"border": true, "rounded": true},
   "notification.disabledProgressSources": ["*"],
-  "diagnostic.signOffset": 1,
   "diagnostic.errorSign": "┃",
   "diagnostic.warningSign": "┃",
   "diagnostic.infoSign": "┃",
@@ -19,9 +17,7 @@
   "pairs.enableBackspace": true,
   "translator.engines": ["youdao"],
   "tsserver.trace.server": "messages",
-  "tsserver.enableJavascript": true,
   "tsserver.enable": true,
-  "pyright.inlayHints.enable": false,
   "git.changedSign.text": "┃",
   "git.addedSign.text": "┃",
   "git.removedSign.text": "▁",
@@ -32,11 +28,18 @@
   "git.addGBlameToVirtualText": false,
   "git.addGBlameToBufferVar": true,
   "git.splitWindowCommand": "below 10sp",
-  "java.clean.workspace": true,
+  "snippets.priority": 1,
+  "snippets.userSnippetsDirectory": "~/.config/nvim/snippets",
+  "snippets.textmateSnippetsRoots": ["~/.config/nvim/snippets/vscode"],
+  "snippets.ultisnips.enable": true,
+  "snippets.ultisnips.directories": [
+    "UltiSnips"
+  ],
+  "snippets.snipmate.enable": true,
   "java.configuration.runtimes": [
     {
-      "name": "JavaSE-1.8",
-      "path": "/usr/lib/jvm/java-8-openjdk",
+      "name": "JavaSE-19",
+      "path": "/usr/lib/jvm/java-19-openjdk",
       "default": true
     }
   ],

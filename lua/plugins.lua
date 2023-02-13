@@ -65,6 +65,9 @@ return require('packer').startup(
     use {
       'folke/tokyonight.nvim',
     }
+    use {
+      'shaunsingh/nord.nvim',
+    }
 
     use {
       'nvim-lualine/lualine.nvim',

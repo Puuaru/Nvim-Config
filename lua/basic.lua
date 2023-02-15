@@ -78,7 +78,7 @@ G.cmd([[ set viminfo=!,'10000,<50,s10,h ]])
 
 -- 折叠
 G.cmd([[
-    set foldenable
+    set nofoldenable
     set foldmethod=manual
     set viewdir=~/.config/nvim/cache/viewdir
 ]])

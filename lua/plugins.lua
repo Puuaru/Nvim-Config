@@ -74,6 +74,15 @@ return require('packer').startup(
       requires = { 'kyazdani42/nvim-web-devicons', opt = true },
       config = "require('plugin-config/nvim-lualine').setup()"
     }
+
+    -- markdown预览插件 导航生成插件
+    require('plugin-config/markdown').config()
+    use { 'mzlogin/vim-markdown-toc', ft = 'markdown' }
+    use { 'iamcco/markdown-preview.nvim', config = "require('plugin-config/markdown').setup()", run = 'cd app && npm install', cmd = 'MarkdownPreview', ft = 'markdown' }
+    use {
+      'ferrine/md-img-paste.vim',
+      config = "require('plugin-config/md-img-paste').setup()"
+    }
   end
 )
 

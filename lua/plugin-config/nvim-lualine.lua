@@ -4,7 +4,7 @@ local custom_theme = require('lualine.themes.nightfly')
 function M.setup()
   require('lualine').setup {
     options = {
-      theme = custom_theme,
+      theme = "tokyonight",
       icons_enabled = true,
     },
   }

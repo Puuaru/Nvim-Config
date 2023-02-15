@@ -6,7 +6,7 @@ function M.setup()
     pattern = { 'markdown' },
     callback = function ()
       vim.keymap.set(
-        'n', '<leader>z', '<cmd>call mdip#MarkdownClipboardImage()<CR>', { buffer = true, silent = true, remap = true }
+        'n', '<leader>p', '<cmd>call mdip#MarkdownClipboardImage()<CR>', { buffer = true, silent = true, remap = true }
       )
     end
   })

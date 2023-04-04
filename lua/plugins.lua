@@ -83,6 +83,8 @@ return require('packer').startup(
       'ferrine/md-img-paste.vim',
       config = "require('plugin-config/md-img-paste').setup()"
     }
+
+    use { 'tpope/vim-surround' }
   end
 )
 

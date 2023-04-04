@@ -17,6 +17,7 @@ function M.config()
         'coc-translator',
         'coc-markdownlint',
         'coc-git',
+        'coc-go'
     }
     G.cmd("command! -nargs=? Fold :call CocAction('fold', <f-args>)")
     G.cmd("command! -nargs=0 Prettier :CocCommand prettier.formatFile")

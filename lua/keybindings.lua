@@ -1,3 +1,4 @@
+local G = require('G')
 -- leader key 使用空格
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
@@ -23,6 +24,12 @@ map("v", "K", ":move '>-2<CR>gv-gv", opt)
 
 -- visual模式下粘贴不会复制
 map("v", "p", '"_dP', opt)
+
+-- visual模式下左右缩进
+G.map({
+  { 'v', '<', '<gv', { noremap = true } },
+  { 'v', '>', '>gv', { noremap = true } },
+})
 
 -------------------------------------------------------------------------------
 -- 分屏快捷键

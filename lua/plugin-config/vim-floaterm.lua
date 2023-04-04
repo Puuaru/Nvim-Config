@@ -21,11 +21,13 @@ end
 function M.runFile()
     G.cmd('w')
     local ft = G.eval('&ft')
-    local run_cmd = { javascript = 'node', typescript = 'ts-node', html = 'microsoft-edge-stable', python = 'python', go = 'go run', sh = 'bash', lua = 'lua' }
+    local run_cmd = { javascript = 'node', typescript = 'esno', html = 'microsoft-edge-stable', python = 'python', go = 'go run', sh = 'bash', lua = 'lua' }
     if run_cmd[ft] then M.toggleFT('RUN', run_cmd[ft] .. ' %')
     elseif ft == 'markdown' then G.cmd('MarkdownPreview')
     elseif ft == 'java' then M.toggleFT('RUN', 'javac % && java %<')
     elseif ft == 'c' then M.toggleFT('RUN', 'gcc % -o %< && ./%< && rm %<')
+    elseif ft == 'cpp' then M.toggleFT('RUN', 'g++ % -o %< && ./%< && rm %<')
+    elseif ft == 'go' then M.toggleFT('RUN', 'go run %<')
     end
 end
 

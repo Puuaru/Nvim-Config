@@ -5,6 +5,7 @@ function M.config()
     G.g.coc_global_extensions = {
         'coc-marketplace',
         '@yaegassy/coc-volar',
+        '@yaegassy/coc-tailwindcss3',
         'coc-tsserver',
         'coc-json',
         'coc-html', 'coc-css', 'coc-vetur',

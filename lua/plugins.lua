@@ -85,6 +85,8 @@ return require('packer').startup(
     }
 
     use { 'tpope/vim-surround' }
+
+    use {'maxmellon/vim-jsx-pretty'}
   end
 )
 
